@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+body {
+    background-color: var(--light-green);
+    color: var(--dark-grey);
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --medium: hsl(186, 15%, 59%);
+    --dark-grey: hsl(187, 24%, 22%);
+    --light-green: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --dark-green: hsl(169, 82%, 17%);
+    --red: hsl(0, 66%, 56%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: auto;
+    width: 500px;
+    border-radius: 20px;
+    flex-shrink: 1;
+}
+
+.wrapper h1 {
+    font-size: 2rem;
+    margin: 20px 20px;
+}
+
+label[aria-required="true"]::after {
+    content: " *";
+    color: var(--green);
+}
+
+/* Name Label & Input */
+
+.name-container {
+    display: flex;
+}
+
+.name {
+    margin: 0 20px;
+}
+
+#email {
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+#first-name {
+    width: 200px;
+}
+
+#last-name {
+    width: 220px;
+}
+
+#first-name, #last-name {
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 10px;
+}
+
+/* Email Label & Input */
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#label-email, #email {
+    margin: 5px 20px;
+}
+
+#email {
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+/* Query Label & Input */
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 10px;
+}
+
+.radio-option {
+    border: 1px solid; 
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.query-type {
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#label-query-type {
+    margin: 0px 10px;
+}
+
+#general-enquiry, #support-request {
+    position: relative;
+    top: 2px;
+    right: 2px;
+}
+
+/* Message */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#label-message {
+    padding: 0px 20px;
+}
+
+#message {
+    margin: 10px 20px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+/* Consent Box */
+.checkbox-container {
+    margin: 0 0 10px 20px;
+}
+
+.checkbox-container label {
+    margin: 0 5px;
+}
+
+.checkbox-container label:hover {
+    cursor: pointer;
+}
+
+#consent {
+    position: relative;
+    top: 2px;
+}
+
+textarea {
+    resize: none;
+    padding: 10px 10px;
+    border: 1px solid;
+}
+
+/* Submit Button */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    height: 40px;
+    width: 460px;
+    border: none;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--dark-green);
+}
+
+#submit {
+    margin-bottom: 20px;
+}
+
+/* Error Message */
+.first-name-error, .last-name-error {
+    color: var(--red);
+}
+
+.email-error, .query-error, .message-error, .consent-error {
+    color: var(--red);
+    margin: 5px 20px;
+}
+
+#error-query {
+    margin: 0 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* User Interactivity */
+
+#first-name:hover, #last-name:hover, #email:hover, #message:hover {
+    cursor: pointer;
+    border: 1px solid var(--green);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+.query-type:hover {
+    cursor: pointer;
+}
+
+.general-enquiry label:hover, .support-request label:hover {
+    cursor: pointer;
+}
+
+input[type="text"]:-webkit-autofill, input[name="email"]:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--light-green) inset;
+    box-shadow: 0 0 0px 1000px var(--light-green) inset;
+}
+
+/* Toast Notification*/
+.toastBox {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.toastHead {
+    display: inline-flex;
+}
+
+.toastHidden {
+    display: none;
+}
+
+#toastMessage {
+    font-size: 1.1rem;
+    margin: 0 1vh;
+}
+
+#toastParagraph {
+    margin: 0.3vh;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .wrapper, .toastBox {
+        height: auto;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .toastBox {
+        width: 80%;
+    }
+
+    .name-container, .email-container, .radio-container, .message-container, .checkbox-container {
+        flex-direction: column;
+    }
+
+    #first-name, #last-name, #email {
+        width: 100%;
+    }
+
+    #email {
+        width: auto;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+
+@media(min-width: 768px) {
+    .general-enquiry, .support-request{
+        width: 50vw;
+    }
+    
+    button {
+        width: 95%;
+    }
+}

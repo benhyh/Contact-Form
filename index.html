@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form | GitHub pages</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>I am with GitHub pages.</h1>
+    <!-- Contact Form -->
+    <form class="container">
+      <!--Toast Message -->
+        <div class="toastBox toastHidden">
+          <div class="toastHead">
+            <img src="assets\images\icon-success-check.svg" id="toastIcon">
+            <h4 id="toastMessage">Message Sent!</h4>
+          </div>
+            <p id="toastParagraph">Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+        <div class="wrapper">
+                <!-- Heading -->
+                <h1>Contact Us</h1>
+          
+                <!-- Name Input -->
+                <div class="name-container">
+                  <div class="name">
+                    <label for="first-name" id="label-first-name" aria-required="true">First Name</label>
+                    <input type="text" id="first-name" name="first-name">
+                    <p class="error first-name-error hidden">This field is required</p>
+                  </div>
+                  <div class="name">
+                    <label for="last-name" id="label-last-name" aria-required="true">Last Name</label>
+                    <input type="text" id="last-name" name="last-name">
+                    <p class="error last-name-error hidden">This field is required</p>
+                  </div>
+                </div>
+          
+                <!-- Email Input -->
+                  <div class="email-container">
+                    <label for="email" id="label-email" aria-required="true">Email Address</label>
+                    <input id="email" name="email">
+                    <p class="error email-error hidden">This field is required</p>
+                  </div>
+        
+                <!-- Query Type Radio Buttons -->
+                <div class="radio-container">
+                  <label for="query-type" id="label-query-type" aria-required="true">Query Type</label>
+                  <div class="query-type" aria-required="true">
+                    <div class="radio-option general-enquiry">
+                      <input type="radio" name="query-type" value="General Enquiry" id="general-enquiry">
+                      <label for="general-enquiry">General Enquiry</label>
+                    </div>
+                    <div class="radio-option support-request">
+                      <input type="radio" name="query-type" value="Support Request" id="support-request">
+                      <label for="support-request">Support Request</label>
+                    </div>
+                  </div>
+                  <p class="error query-error hidden" id="error-query">Please select a query type</p>
+                </div>
+          
+                <!-- Message Text-Area -->
+                <div class="message-container">
+                  <label for="message" id="label-message" aria-required="true">Message</label>
+                  <textarea id="message"></textarea>
+                  <p class="error message-error hidden">This field is required</p>
+                </div>  
+          
+                <!-- Consent Checkbox -->
+                <div class="checkbox-container">
+                  <input type="checkbox" aria-required="true" id="consent">
+                  <label aria-required="true" for="consent">I consent to being contacted by the team</label>
+                </div>
+                <p class="error consent-error hidden">To submit this form, please consent to being contacted</p>
+          
+                <!-- Submit Button -->
+                <button type="submit" id="submit">Submit</button>
+          </div>
+    </form>
+<script src="script.js"></script>
 </body>
 </html>
