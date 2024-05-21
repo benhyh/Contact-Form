@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [[Add solution URL here](https://www.frontendmentor.io/solutions/contact-form-html-css-javascript-xY5rvbLWHw)]
-- Live Site URL: [Add live site URL here](https://benhyh.github.io/Contact-Form/)
+- Solution URL: [[FrontEnd Mentor Solution URL](https://www.frontendmentor.io/solutions/contact-form-html-css-javascript-xY5rvbLWHw)]
+- Live Site URL: [[Live site URL](https://benhyh.github.io/Contact-Form/)]
 
 ## My process
 
